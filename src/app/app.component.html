@@ -1,0 +1,6 @@
+<layout>
+  <flight-briefing-form [isLoading]="isLoading$ | async" />
+  <div table class="u-d-fx">
+    <flight-briefing-table [data]="data$ | async" />
+  </div>
+</layout>

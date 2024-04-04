@@ -1,0 +1,20 @@
+.c-table-wrapper {
+  width: 100%;
+}
+
+.c-row {
+  display: flex;
+  width: 100%;
+}
+
+.c-row--gray {
+  background: #c5ced8;
+}
+
+.c-cell {
+  min-width: 130px;
+}
+
+.c-cell--grow {
+  flex-grow: 1;
+}

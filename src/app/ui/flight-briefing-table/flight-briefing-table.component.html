@@ -1,0 +1,25 @@
+<div class="c-table u-b">
+  @for (station of data | keyvalue; track $index) {
+  <div class="c-row c-row--gray u-b-b" @fadeIn>
+    <div class="c-cell u-p-2 u-fw-bold">
+      {{ station.key }}
+    </div>
+    <div class="c-cell"></div>
+    <div class="c-cell c-cell--grow"></div>
+  </div>
+  @for (data of station.value; track $index; let first = $first; let last =
+  $last) {
+  <div class="c-row u-b-b u-b-r" @fadeIn>
+    <div class="c-cell u-p-2">
+      {{ data.queryType }}
+    </div>
+    <div class="c-cell u-b-r u-b-l u-p-2">
+      {{ data.reportTime | date : "dd.MM.yyyy H:mm" }}
+    </div>
+    <div
+      class="c-cell c-cell--grow u-p-2"
+      [highlightWeatherCode]="data.text"
+    ></div>
+  </div>
+  } }
+</div>
